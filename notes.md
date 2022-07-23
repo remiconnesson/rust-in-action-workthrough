@@ -17,3 +17,10 @@ By writing listing 1.3, TIL:
 1. `#![allow(dead_code)]` permet de ne pas afficher les warning de deads codes
 2. J'ai créer un alias `cre="cargo run --example"` pour plus facilement run les examples
 
+...
+
+I'm encountering issues with nonbreaking space... those happens by typing `alt + <Space>` for example before opening a curly bracket pair.
+
+I'm looking for a way to remove them automatically.
+
+I've added `:autocmd BufWritePre *.rs :%s/ / /g` to my `.vimrc`
