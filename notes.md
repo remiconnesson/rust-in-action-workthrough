@@ -24,3 +24,11 @@ I'm encountering issues with nonbreaking space... those happens by typing `alt +
 I'm looking for a way to remove them automatically.
 
 I've added `:autocmd BufWritePre *.rs :%s/ / /g` to my `.vimrc`
+
+(and I've removed it currently because it screams an error when there's no `nbsp` in the file :/ )
+
+...
+
+There's something called a `prelude` that I need to investigate : https://doc.rust-lang.org/std/prelude/index.html
+
+...
