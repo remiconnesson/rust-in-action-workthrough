@@ -36,3 +36,20 @@ There's something called a `prelude` that I need to investigate : https://doc.ru
 TODO: Page 46 includes a cheat-sheet about iterating over a collection, such as performance tips.
 
 ...
+
+The `break` keyword can return a value.
+```rust
+let n = loop {
+	break 123;
+};
+
+assert_eq!(n, 123);
+```
+__ Curly brackets & semi-colons __
+- Question: when am I supposed to put semicolons after a curly bracket (if, loop, ..)?
+
+...
+
+
+
+
