@@ -50,6 +50,17 @@ __ Curly brackets & semi-colons __
 
 ...
 
+In that exemple the comparison won't work because a `&integer` et `integer` ne sont pas comparable.
+```
+fn main() {
+    let needle = 0o204;
+    let haystack = [1, 2, 132, 12345];
 
-
-
+    for item in &haystack {
+        if item == needle {
+            println!("{}", item);
+        }
+    }
+}
+```
+Error Code : `rustc --explain E0277`
