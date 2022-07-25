@@ -32,3 +32,7 @@ I've added `:autocmd BufWritePre *.rs :%s/ / /g` to my `.vimrc`
 There's something called a `prelude` that I need to investigate : https://doc.rust-lang.org/std/prelude/index.html
 
 ...
+
+TODO: Page 46 includes a cheat-sheet about iterating over a collection, such as performance tips.
+
+...
