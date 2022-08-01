@@ -51,7 +51,7 @@ __ Curly brackets & semi-colons __
 ...
 
 In that exemple the comparison won't work because a `&integer` et `integer` ne sont pas comparable.
-```
+```rust
 fn main() {
     let needle = 0o204;
     let haystack = [1, 2, 132, 12345];
@@ -64,3 +64,33 @@ fn main() {
 }
 ```
 Error Code : `rustc --explain E0277`
+
+... 
+
+Je prends ne note la page 45+ du livre que je trouve bien faite
+
+- `for item in collection { ... } ` will end the lifetime  of collection after the block. (item is immutable), it's equivalent `for item in in IntoIterator::into_iter(collection)`
+- `for item in &collection { ... } ` will borrow immutable references to each item in the collection without ending its lifetime, it's equivalent to `for item in collection.iter()`
+- `for item in &mut collection { ... } ` will borrow mutable references to each item in the collection without ending the collection lifetime, it's equivalent to `for item in collection.iter_mut()`
+
+also, anonymous loops 
+`for _ in 0..10 { ... }`
+
+we can break from a specific loop by labelling it 
+```rust
+'outer: for x in 1..10 {
+    for y in 1..11 {
+        for z in 5..=10 {
+            println!("Hey");
+            if x * y * z == 125 {
+                break 'outer;
+            }
+        }
+    }
+}
+```
+
+(we can also use `continue` in that fashion).
+
+
+
