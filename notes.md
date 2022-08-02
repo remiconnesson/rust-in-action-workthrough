@@ -127,3 +127,13 @@ fn add<T: std::ops::Add<Output = T>>(i: T, j: T) -> T {
 ```
 ...
 
+Notes on arrays :
+
+- type `[T; n]` is an array, type `[T]` is a slice
+- `[u8; 3]` is a different type than `[u8; 4]`
+- in Rust, Array indexing is bounds checked and will panic when such check fail
+
+... 
+
+
+
