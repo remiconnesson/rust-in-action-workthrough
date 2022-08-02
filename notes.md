@@ -92,5 +92,38 @@ we can break from a specific loop by labelling it
 
 (we can also use `continue` in that fashion).
 
+...
 
+Lifetime + type annotation syntax can get a bit busy
+
+```rust
+fn multiply_with_lifetimes<'a, 'b>(i: &'a i32, j: &'b i32) -> i32 {
+    *i * *j
+}
+```
+
+- parameter `i` is an `i32` with lifetime `a`
+- Lifetimes are usually inferred in a process called _lifetime elision_
+
+...
+
+Generics
+
+```rust
+fn add<T>(i: T, j: T) -> T { 
+    i + j 
+}
+```
+
+This won't compile as is because type `T` doesn't implement `std::ops::Add`.
+
+From `rustc --explain E0369`
+> It is also possible to overload most operators for your own type by implementing traits from `std::ops`.
+
+```rust
+fn add<T: std::ops::Add<Output = T>>(i: T, j: T) -> T {
+    i + j 
+}
+```
+...
 
