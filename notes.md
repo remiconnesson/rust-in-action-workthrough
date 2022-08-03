@@ -135,5 +135,7 @@ Notes on arrays :
 
 ... 
 
+In `10_b_vectors.rs`, why did we need to add .iter() to the vector, doesn't it come with iterator trait support from the start? Do we need to use .iter() to transform it into something compatible with the iterator trait?
 
+..
 
