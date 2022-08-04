@@ -139,3 +139,7 @@ In `10_b_vectors.rs`, why did we need to add .iter() to the vector, doesn't it c
 
 ..
 
+Use `cre 11_a_grep_lite -q -- --help` to access the help written by `clap@2` (like in `.js`).
+The `--` signals to `cargo` to pass the arguments to the built binary.
+
+...
