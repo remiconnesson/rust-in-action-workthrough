@@ -29,10 +29,13 @@ fn main() {
     let f = File::open(input).unwrap();
     let reader = BufReader::new(f);
 
-    for line_ in reader.lines() {
+    for (i, line_) in reader.lines().enumerate() {
         let line = line_.unwrap();
         match re.find(&line) {
-            Some(_) => println!("{}", line),
+            Some(_) => {
+                let line_number = i + 1;
+                println!("{}: {}", line_number, line);
+            }
             None => (),
         }
     }
