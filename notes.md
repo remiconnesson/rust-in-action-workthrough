@@ -143,3 +143,7 @@ Use `cre 11_a_grep_lite -q -- --help` to access the help written by `clap@2` (li
 The `--` signals to `cargo` to pass the arguments to the built binary.
 
 ...
+
+Finished reading chapter 2. I'll need to dig on the subject of
+- `BufRead + Sized` generic to accept `BufRead` & `stdin`
+- `BufRead` and `std::io::stdin` 
