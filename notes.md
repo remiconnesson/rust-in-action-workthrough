@@ -153,3 +153,12 @@ Finished reading chapter 2. I'll need to dig on the subject of
 - `fn () -> ! { unimplemented!() }` : `!` indicates this function will never return...
 - `#![allow(unused_variable)` on top of the file to allow unused variable, the `!` looks like it's a macro.
 - `#[allow(dead_code)]` before an unused block of code
+
+...
+
+`()` is a zero length tuple, used to express that a function returns no value. Functions that appear to have no return type returns `()`, as well as expressions that end with a semicolon `;`.
+`fn blabla() -> () {}` and `fn blabla() {}` are equivalent.
+
+`!` is the `Never` type, indicating that a function never returns. For example in case of `panic` or infinite `loop` without a `break` keyword.
+
+
