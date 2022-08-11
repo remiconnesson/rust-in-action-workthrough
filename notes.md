@@ -147,3 +147,9 @@ The `--` signals to `cargo` to pass the arguments to the built binary.
 Finished reading chapter 2. I'll need to dig on the subject of
 - `BufRead + Sized` generic to accept `BufRead` & `stdin`
 - `BufRead` and `std::io::stdin` 
+
+...
+
+- `fn () -> ! { unimplemented!() }` : `!` indicates this function will never return...
+- `#![allow(unused_variable)` on top of the file to allow unused variable, the `!` looks like it's a macro.
+- `#[allow(dead_code)]` before an unused block of code

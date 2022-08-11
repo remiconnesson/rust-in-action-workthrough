@@ -1,0 +1,24 @@
+#![allow(unused_variables)]
+
+type File = String; // type alias
+
+fn open(f: &mut File) -> bool {
+    true
+}
+
+fn close(f: &mut File) -> bool {
+    true
+}
+
+#[allow(dead_code)]
+fn read(f: &mut File, save_to: &mut Vec<u8>) -> ! {
+    // this function never returns, hence the !
+    unimplemented!()
+}
+
+fn main() {
+    let mut f1 = File::from("f1.txt");
+    open(&mut f1);
+    // read(&mut f1);
+    close(&mut f1);
+}
