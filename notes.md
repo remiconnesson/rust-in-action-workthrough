@@ -161,4 +161,8 @@ Finished reading chapter 2. I'll need to dig on the subject of
 
 `!` is the `Never` type, indicating that a function never returns. For example in case of `panic` or infinite `loop` without a `break` keyword.
 
+...
 
+In rust, methods are declared separately from the struct. `struct` blocks declare the data types, `impl` blocks declare the methods.
+
+...
